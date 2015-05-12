@@ -8,6 +8,21 @@ This is a 4 container project. I'm using `docker-compose` to bring it all up
 * 1 Nginx container. This will be used as a reverse proxy between Go and the
 wild wild web.
 
+## Download, Build, and Run
+```
+git clone git@github.com:variadico/hellodocker.git
+cd hellodocker
+docker-compose build
+docker-compose up -d
+```
+
+Then fire up Chrome and point it to the Docker host IP. I'm on a Mac, so I have
+to visit whatever IP address `boot2docker ip` gives me.
+
+If you see
+`Cannot start container 8675309: Cannot link to a non running container` then
+just run `docker-compose up -d` again. I'm not sure how to prevent that.
+
 ## Files
 This is what each file is doing.
 
